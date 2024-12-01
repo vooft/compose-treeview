@@ -12,6 +12,10 @@ permissions:
   contents: write
   issues: read
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
+
 jobs:
   build:
 
@@ -32,8 +36,11 @@ jobs:
         with:
           dependency-graph: generate-and-submit
 
-      - name: Build
-        run: ./gradlew build --parallel --no-daemon
+      - name: Assemble
+        run: ./gradlew assemble
+
+      - name: Check
+        run: ./gradlew check
 
       - name: Publish Test Report
         uses: mikepenz/action-junit-report@v5
