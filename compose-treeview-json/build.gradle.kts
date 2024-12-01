@@ -1,5 +1,6 @@
 plugins {
     `compose-treeview-multiplatform-lib`
+    `compose-treeview-publish`
     alias(libs.plugins.kotlin.serialization)
     alias(libs.plugins.compose.multiplatform)
     alias(libs.plugins.compose.compiler)
