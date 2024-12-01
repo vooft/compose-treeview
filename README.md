@@ -66,3 +66,9 @@ fun TreeViewExample() {
     TreeView(tree)
 }
 ```
+
+<!-- TAG_PLATFORMS -->
+[badge-platform-android]: http://img.shields.io/badge/-android-6EDB8D.svg?style=flat
+[badge-platform-jvm]: http://img.shields.io/badge/-jvm-DB413D.svg?style=flat
+[badge-platform-ios]: http://img.shields.io/badge/-ios-CDCDCD.svg?style=flat
+[badge-platform-wasm]: https://img.shields.io/badge/-wasm-624FE8.svg?style=flat
