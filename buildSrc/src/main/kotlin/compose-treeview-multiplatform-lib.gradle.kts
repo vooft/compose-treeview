@@ -28,8 +28,8 @@ kotlin {
     }
 
     listOf(
-//        iosX64(),
-//        iosArm64(),
+        iosX64(),
+        iosArm64(),
         iosSimulatorArm64()
     ).forEach {
         it.binaries.framework {
@@ -50,7 +50,7 @@ kotlin {
 }
 
 android {
-    namespace = "my.company.name"
+    namespace = "io.github.vooft.compose.treeview"
     compileSdk = 35
 
     defaultConfig {
