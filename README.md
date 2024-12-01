@@ -8,7 +8,7 @@
 ![badge-platform-android]
 ![badge-platform-ios]
 
-![badge-demo](https://vooft.github.io/compose-treeview/)
+[badge-demo] [WASM demo]((https://vooft.github.io/compose-treeview/))
 
 # compose-treeview
 
