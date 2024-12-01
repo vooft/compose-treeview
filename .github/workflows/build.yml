@@ -27,14 +27,6 @@ jobs:
           distribution: temurin
           cache: gradle
 
-      - name: Cache Kotlin Native
-        uses: actions/cache@v4
-        with:
-          path: |
-            ~/.konan
-          key: ${{ runner.os }}-konan
-          restore-keys: ${{ runner.os }}-konan
-
       - name: Set up Gradle
         uses: gradle/actions/setup-gradle@v4
         with:
