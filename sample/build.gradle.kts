@@ -40,15 +40,7 @@ kotlin {
         binaries.executable()
     }
 
-    listOf(
-//        iosArm64(),
-        iosSimulatorArm64()
-    ).forEach { iosTarget ->
-        iosTarget.binaries.framework {
-            baseName = "SampleApp"
-            isStatic = true
-        }
-    }
+    iosSimulatorArm64()
 
     sourceSets {
         val desktopMain by getting
