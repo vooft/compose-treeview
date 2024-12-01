@@ -15,11 +15,8 @@ allprojects {
 
 tasks.register("composeTreeviewPublishToMavenCentral") {
     dependsOn(
-//        subprojects.mapNotNull { it.tasks.findByName("publishAndReleaseToMavenCentral") } +
-//                gradle.includedBuilds.map { it.task(":publishAndReleaseToMavenCentral") }
-
-        subprojects.mapNotNull { it.tasks.findByName("publishToMavenCentral") } +
-                gradle.includedBuilds.map { it.task(":publishToMavenCentral") }
+        subprojects.mapNotNull { it.tasks.findByName("publishAndReleaseToMavenCentral") } +
+                gradle.includedBuilds.map { it.task(":publishAndReleaseToMavenCentral") }
     )
 }
 
