@@ -1,0 +1,24 @@
+[versions]
+kotlin = "2.0.21"
+
+[libraries]
+gradle-plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
+gradle-plugin-detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version = "1.23.7" }
+gradle-plugin-ktlint = { module = "org.jmailen.gradle:kotlinter-gradle", version = "4.5.0" }
+gradle-plugin-dokka = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version = "1.9.20" }
+gradle-plugin-maven-central-publish = { module = "com.vanniktech:gradle-maven-publish-plugin", version = "0.30.0" }
+gradle-plugin-android-library = { module = "com.android.library:com.android.library.gradle.plugin", version = "8.7.2" }
+
+kt-uuid-core = { module = "io.github.vooft:kt-uuid-core", version = "0.2.2" }
+
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.7.3" }
+
+okio = { module = "com.squareup.okio:okio", version = "3.9.1" }
+
+compose-activity = { module = "androidx.activity:activity-compose", version = "1.9.3" }
+compose-voyager = { module = "cafe.adriel.voyager:voyager-navigator", version = "1.1.0-beta03" }
+
+[plugins]
+compose-multiplatform = { id = "org.jetbrains.compose", version = "1.7.1" }
+compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
+kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }

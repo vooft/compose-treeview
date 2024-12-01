@@ -1,0 +1,59 @@
+build:
+  maxIssues: 0
+
+config:
+  validation: true
+  warningsAsErrors: true
+
+output-reports:
+  active: true
+  exclude:
+    - 'XmlOutputReport'
+    - 'HtmlOutputReport'
+    - 'SarifOutputReport'
+
+naming:
+  FunctionNaming:
+    # can't handle factory pattern methods, like fun MyClass(arg: String) = MyClass(arg.toInt())
+    active: false
+
+complexity:
+  LongMethod:
+    threshold: 100
+    ignoreAnnotated:
+      - org.junit.jupiter.api.Test
+  LongParameterList:
+    ignoreDefaultParameters: true
+    functionThreshold: 7
+    constructorThreshold: 8
+  TooManyFunctions:
+    active: false
+
+exceptions:
+  TooGenericExceptionCaught:
+    active: false
+
+style:
+  # enforced by ktlint and configured via .editorconfig
+  MaxLineLength:
+    active: false
+  ForbiddenComment:
+    comments:
+      - reason: 'Forbidden STOPSHIP todo marker in comment, please address the problem before shipping the code.'
+        value: 'STOPSHIP:'
+  MagicNumber:
+    active: false
+  ReturnCount:
+    max: 5
+  UseOrEmpty:
+    active: false
+
+coroutines:
+  SuspendFunWithFlowReturnType:
+    active: false
+  InjectDispatcher:
+    active: false
+
+potential-bugs:
+  UnreachableCode:
+    active: false

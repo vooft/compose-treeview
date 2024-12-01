@@ -1,0 +1,53 @@
+name: build-on-push
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  checks: write
+  pull-requests: write
+  contents: write
+  issues: read
+
+jobs:
+  build:
+
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v4
+        with:
+          java-version: 21
+          distribution: temurin
+          cache: gradle
+
+      - name: Cache Kotlin Native
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.konan
+          key: ${{ runner.os }}-konan
+          restore-keys: ${{ runner.os }}-konan
+
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          dependency-graph: generate-and-submit
+
+      - name: Build
+        run: ./gradlew build --max-workers=1 --no-parallel --no-daemon
+
+      - name: Publish Test Report
+        uses: mikepenz/action-junit-report@v5
+        if: always()
+        with:
+          include_passed: true
+          detailed_summary: true
+          report_paths: '**/build/test-results/test/TEST-*.xml'
+

@@ -1,0 +1,40 @@
+root = true
+
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+[*.{kt,kts}]
+ktlint_code_style = intellij_idea
+
+# don't force UpperCamelCase, needed for sealed-class-like-enum, for example com.razz.ledger.transaction.TransactionCategory
+ktlint_standard_class-naming = disabled
+
+# don't force function names to start from lowercase letter (composable functions)
+ktlint_standard_function-naming = disabled
+
+# ktlint_standard_function-naming = disabled # don't force lowerCamelCase
+ktlint_standard_class-signature = disabled # don't force new line before super classes
+
+# allow lowercase filenames, like principal.kt
+ktlint_standard_filename = disabled
+
+# without it enum can only be a single line, like enum MyEnum { A, B, C }
+# or a multi-line, where every entry is on its own line
+ktlint_standard_enum-wrapping = disabled
+
+# do not force single-line functions
+ktlint_standard_function-expression-body = disabled
+
+# who cares about trailing commas
+ktlint_standard_trailing-comma-on-call-site = disabled
+ktlint_standard_trailing-comma-on-declaration-site = disabled
+
+# allow comments after a value parameter, i.e. val myInt: Int // this is my int
+ktlint_standard_value-parameter-comment = disabled
+
+max_line_length = 140
+
+ij_kotlin_name_count_to_use_star_import = 999
+ij_kotlin_name_count_to_use_star_import_for_members = 999
+ij_kotlin_packages_to_use_import_on_demand = unset
