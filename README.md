@@ -8,6 +8,8 @@
 ![badge-platform-android]
 ![badge-platform-ios]
 
+![badge-demo](https://vooft.github.io/compose-treeview/)
+
 # compose-treeview
 
 A tree view for Compose Multiplatform. This project is a fork of [bonsai](https://github.com/adrielcafe/bonsai) by Adriel Cafe.
@@ -72,3 +74,4 @@ fun TreeViewExample() {
 [badge-platform-jvm]: http://img.shields.io/badge/-jvm-DB413D.svg?style=flat
 [badge-platform-ios]: http://img.shields.io/badge/-ios-CDCDCD.svg?style=flat
 [badge-platform-wasm]: https://img.shields.io/badge/-wasm-624FE8.svg?style=flat
+[badge-demo]: https://img.shields.io/badge/-demo-4E8EF7.svg?style=flat
