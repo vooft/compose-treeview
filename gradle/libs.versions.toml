@@ -4,7 +4,7 @@ kotlin = "2.1.0"
 [libraries]
 gradle-plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 gradle-plugin-detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version = "1.23.7" }
-gradle-plugin-ktlint = { module = "org.jmailen.gradle:kotlinter-gradle", version = "5.0.0" }
+gradle-plugin-ktlint = { module = "org.jmailen.gradle:kotlinter-gradle", version = "5.0.1" }
 gradle-plugin-dokka = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version = "1.9.20" }
 gradle-plugin-maven-central-publish = { module = "com.vanniktech:gradle-maven-publish-plugin", version = "0.30.0" }
 gradle-plugin-android-library = { module = "com.android.library:com.android.library.gradle.plugin", version = "8.7.3" }
