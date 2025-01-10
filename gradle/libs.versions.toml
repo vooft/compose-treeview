@@ -11,7 +11,7 @@ gradle-plugin-android-library = { module = "com.android.library:com.android.libr
 
 kt-uuid-core = { module = "io.github.vooft:kt-uuid-core", version = "0.2.2" }
 
-kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.7.3" }
+kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.8.0" }
 
 okio = { module = "com.squareup.okio:okio", version = "3.10.2" }
 
