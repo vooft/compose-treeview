@@ -7,7 +7,7 @@ gradle-plugin-detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plu
 gradle-plugin-ktlint = { module = "org.jmailen.gradle:kotlinter-gradle", version = "5.0.1" }
 gradle-plugin-dokka = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version = "2.0.0" }
 gradle-plugin-maven-central-publish = { module = "com.vanniktech:gradle-maven-publish-plugin", version = "0.30.0" }
-gradle-plugin-android-library = { module = "com.android.library:com.android.library.gradle.plugin", version = "8.8.2" }
+gradle-plugin-android-library = { module = "com.android.library:com.android.library.gradle.plugin", version = "8.9.0" }
 
 kt-uuid-core = { module = "io.github.vooft:kt-uuid-core", version = "0.2.2" }
 
