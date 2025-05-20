@@ -35,7 +35,7 @@ fun main() {
             println("Fonts are ready")
         } else {
             // Displays the progress indicator to address a FOUT or the app being temporarily non-functional during loading
-            Box(modifier = Modifier.fillMaxSize().background(Color.White.copy(alpha = 0.8f)).clickable {  }) {
+            Box(modifier = Modifier.fillMaxSize().background(Color.White.copy(alpha = 0.8f)).clickable { }) {
                 CircularProgressIndicator(modifier = Modifier.align(Alignment.Center))
             }
             println("Fonts are not ready yet")
