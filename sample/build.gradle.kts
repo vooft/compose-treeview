@@ -22,7 +22,7 @@ kotlin {
 
     @OptIn(ExperimentalWasmDsl::class)
     wasmJs {
-        moduleName = "composeApp"
+        outputModuleName = "composeApp"
         browser {
             val rootDirPath = project.rootDir.path
             val projectDirPath = project.projectDir.path
@@ -54,6 +54,7 @@ kotlin {
             implementation(compose.ui)
             implementation(compose.material)
             implementation(compose.materialIconsExtended)
+            implementation(compose.components.resources)
 
             implementation(libs.kotlinx.serialization.json)
             implementation(libs.compose.voyager)
