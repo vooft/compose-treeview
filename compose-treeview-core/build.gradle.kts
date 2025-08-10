@@ -12,7 +12,6 @@ kotlin {
             implementation(compose.foundation)
             implementation(compose.ui)
             implementation(compose.materialIconsExtended)
-            implementation(libs.kt.uuid.core)
         }
     }
 }

@@ -1,3 +1,5 @@
+@file:OptIn(ExperimentalUuidApi::class)
+
 package io.github.vooft.compose.treeview.core.node
 
 import androidx.compose.runtime.Composable
@@ -6,7 +8,8 @@ import io.github.vooft.compose.treeview.core.node.extension.ExpandableNode
 import io.github.vooft.compose.treeview.core.node.extension.ExpandableNodeHandler
 import io.github.vooft.compose.treeview.core.node.extension.SelectableNode
 import io.github.vooft.compose.treeview.core.node.extension.SelectableNodeHandler
-import io.github.vooft.ktuuid.UUID
+import kotlin.uuid.ExperimentalUuidApi
+import kotlin.uuid.Uuid
 
 typealias NodeComponent<T> = @Composable TreeViewScope<T>.(Node<T>) -> Unit
 
@@ -30,7 +33,7 @@ sealed interface Node<T> {
 class LeafNode<T> internal constructor(
     override val content: T,
     override val depth: Int,
-    override val key: String = UUID.randomUUID().toString(),
+    override val key: String = Uuid.random().toHexDashString(),
     override val name: String = content.toString(),
     override val iconComponent: NodeComponent<T> = { DefaultNodeIcon(it) },
     override val nameComponent: NodeComponent<T> = { DefaultNodeName(it) }
@@ -40,7 +43,7 @@ class LeafNode<T> internal constructor(
 class BranchNode<T> internal constructor(
     override val content: T,
     override val depth: Int,
-    override val key: String = UUID.randomUUID().toString(),
+    override val key: String = Uuid.random().toHexDashString(),
     override val name: String = content.toString(),
     override val iconComponent: NodeComponent<T> = { DefaultNodeIcon(it) },
     override val nameComponent: NodeComponent<T> = { DefaultNodeName(it) }
