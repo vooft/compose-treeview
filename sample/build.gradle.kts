@@ -76,14 +76,11 @@ kotlin {
 
 android {
     namespace = "io.github.vooft.compose.treeview.sample"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "io.github.vooft.compose.treeview.sample"
-        minSdk = 21
-        targetSdk = 35
-        versionCode = 1
-        versionName = "1.0"
+        minSdk = 23
     }
     packaging {
         resources {
