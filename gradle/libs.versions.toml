@@ -6,7 +6,7 @@ gradle-plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", v
 gradle-plugin-detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version = "1.23.8" }
 gradle-plugin-ktlint = { module = "org.jmailen.gradle:kotlinter-gradle", version = "5.3.0" }
 gradle-plugin-dokka = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version = "2.1.0" }
-gradle-plugin-maven-central-publish = { module = "com.vanniktech:gradle-maven-publish-plugin", version = "0.35.0" }
+gradle-plugin-maven-central-publish = { module = "com.vanniktech:gradle-maven-publish-plugin", version = "0.36.0" }
 gradle-plugin-android-library = { module = "com.android.library:com.android.library.gradle.plugin", version = "8.13.2" }
 
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.9.0" }
