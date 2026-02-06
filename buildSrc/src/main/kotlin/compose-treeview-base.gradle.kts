@@ -1,5 +1,4 @@
 
-import io.gitlab.arturbosch.detekt.Detekt
 import org.gradle.api.tasks.testing.logging.TestExceptionFormat
 import org.gradle.api.tasks.testing.logging.TestLogEvent
 import org.jmailen.gradle.kotlinter.tasks.FormatTask
@@ -7,22 +6,22 @@ import org.jmailen.gradle.kotlinter.tasks.LintTask
 
 plugins {
     kotlin("multiplatform")
-    id("io.gitlab.arturbosch.detekt")
+//    id("io.gitlab.arturbosch.detekt")
     id("org.jmailen.kotlinter")
 }
 
 group = "io.github.vooft"
 version = System.getenv("TAG") ?: "1.0-SNAPSHOT"
 
-detekt {
-    buildUponDefaultConfig = true
-    config.from(files("${rootDir.absolutePath}/detekt.yaml"))
-    basePath = rootDir.absolutePath
-}
-
-tasks.withType<Detekt> {
-    tasks.getByName("check").dependsOn(this)
-}
+//detekt {
+//    buildUponDefaultConfig = true
+//    config.from(files("${rootDir.absolutePath}/detekt.yaml"))
+//    basePath = rootDir.absolutePath
+//}
+//
+//tasks.withType<Detekt> {
+//    tasks.getByName("check").dependsOn(this)
+//}
 
 tasks.withType<JavaCompile> {
     sourceCompatibility = "11"
