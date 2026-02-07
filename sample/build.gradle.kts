@@ -1,18 +1,19 @@
-import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 import org.jetbrains.kotlin.gradle.targets.js.webpack.KotlinWebpackConfig
 
 plugins {
     `compose-treeview-base`
-    id("com.android.application")
+    id("com.android.kotlin.multiplatform.library")
     alias(libs.plugins.compose.multiplatform)
     alias(libs.plugins.compose.compiler)
 }
 
 kotlin {
-    androidTarget {
-        @OptIn(ExperimentalKotlinGradlePluginApi::class)
+    androidLibrary {
+        namespace = "io.github.vooft.compose.treeview.sample"
+        compileSdk = 36
+        minSdk = 23
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_11)
         }
@@ -40,7 +41,12 @@ kotlin {
         binaries.executable()
     }
 
-    iosSimulatorArm64()
+    iosSimulatorArm64 {
+        binaries.framework {
+            baseName = "SampleApp"
+            isStatic = true
+        }
+    }
 
     sourceSets {
         val desktopMain by getting
@@ -64,37 +70,9 @@ kotlin {
             implementation(kotlin("test"))
         }
 
-        androidMain.dependencies {
-            implementation(libs.compose.activity)
-        }
-
         desktopMain.dependencies {
             implementation(compose.desktop.currentOs)
         }
-    }
-}
-
-android {
-    namespace = "io.github.vooft.compose.treeview.sample"
-    compileSdk = 36
-
-    defaultConfig {
-        applicationId = "io.github.vooft.compose.treeview.sample"
-        minSdk = 23
-    }
-    packaging {
-        resources {
-            excludes += "/META-INF/{AL2.0,LGPL2.1}"
-        }
-    }
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
-        }
-    }
-    compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_11
-        targetCompatibility = JavaVersion.VERSION_11
     }
 }
 
