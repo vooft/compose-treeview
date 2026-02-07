@@ -11,7 +11,6 @@ version = System.getenv("TAG") ?: "1.0-SNAPSHOT"
 
 kotlin {
     androidLibrary {
-        namespace = "io.github.vooft.compose.treeview"
         compileSdk = 35
         minSdk = 21
         compilerOptions {

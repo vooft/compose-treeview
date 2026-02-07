@@ -7,6 +7,10 @@ plugins {
 }
 
 kotlin {
+    androidLibrary {
+        namespace = "io.github.vooft.compose.treeview.json"
+    }
+
     sourceSets {
         commonMain.dependencies {
             api(project(":compose-treeview-core"))
