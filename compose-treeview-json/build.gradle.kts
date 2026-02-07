@@ -15,9 +15,9 @@ kotlin {
         commonMain.dependencies {
             api(project(":compose-treeview-core"))
             api(libs.kotlinx.serialization.json)
-            implementation(compose.runtime)
-            implementation(compose.ui)
-            implementation(compose.foundation)
+            implementation(libs.compose.runtime)
+            implementation(libs.compose.ui)
+            implementation(libs.compose.foundation)
         }
     }
 }
