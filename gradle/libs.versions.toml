@@ -1,5 +1,6 @@
 [versions]
 kotlin = "2.3.10"
+compose = "1.10.0"
 
 [libraries]
 gradle-plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
@@ -13,7 +14,15 @@ kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serializa
 compose-activity = { module = "androidx.activity:activity-compose", version = "1.12.3" }
 compose-voyager = { module = "cafe.adriel.voyager:voyager-navigator", version = "1.1.0-beta03" }
 
+# compose
+compose-runtime = { module = "org.jetbrains.compose.runtime:runtime", version.ref = "compose" }
+compose-foundation = { module = "org.jetbrains.compose.foundation:foundation", version.ref = "compose" }
+compose-ui = { module = "org.jetbrains.compose.ui:ui", version.ref = "compose" }
+compose-material = { module = "org.jetbrains.compose.material:material", version.ref = "compose" }
+compose-material-icons-extended = { module = "org.jetbrains.compose.material:material-icons-extended", version = "1.7.3" }
+compose-components-resources = { module = "org.jetbrains.compose.components:components-resources", version.ref = "compose" }
+
 [plugins]
-compose-multiplatform = { id = "org.jetbrains.compose", version = "1.10.0" }
+compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose" }
 compose-compiler = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
