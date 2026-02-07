@@ -16,6 +16,9 @@ dependencies {
     // android
     implementation(libs.gradle.plugin.android)
 
+    // detekt
+    implementation(libs.gradle.plugin.detekt)
+
     // ktlint
     implementation(libs.gradle.plugin.ktlint)
 
