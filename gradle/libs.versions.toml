@@ -1,6 +1,6 @@
 [versions]
 kotlin = "2.3.10"
-compose = "1.10.0"
+compose = "1.10.1"
 
 [libraries]
 gradle-plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
