@@ -11,7 +11,7 @@ gradle-plugin-maven-central-publish = { module = "com.vanniktech:gradle-maven-pu
 gradle-plugin-android = { module = "com.android.tools.build:gradle", version = "9.0.0" }
 
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version = "1.10.0" }
-compose-activity = { module = "androidx.activity:activity-compose", version = "1.12.3" }
+compose-activity = { module = "androidx.activity:activity-compose", version = "1.12.4" }
 compose-voyager = { module = "cafe.adriel.voyager:voyager-navigator", version = "1.1.0-beta03" }
 
 # compose
