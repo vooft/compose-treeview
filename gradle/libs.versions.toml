@@ -5,7 +5,7 @@ compose = "1.10.0"
 [libraries]
 gradle-plugin-kotlin = { module = "org.jetbrains.kotlin:kotlin-gradle-plugin", version.ref = "kotlin" }
 gradle-plugin-detekt = { module = "io.gitlab.arturbosch.detekt:detekt-gradle-plugin", version = "1.23.8" }
-gradle-plugin-ktlint = { module = "org.jmailen.gradle:kotlinter-gradle", version = "5.4.0" }
+gradle-plugin-ktlint = { module = "org.jmailen.gradle:kotlinter-gradle", version = "5.4.2" }
 gradle-plugin-dokka = { module = "org.jetbrains.dokka:dokka-gradle-plugin", version = "2.1.0" }
 gradle-plugin-maven-central-publish = { module = "com.vanniktech:gradle-maven-publish-plugin", version = "0.36.0" }
 gradle-plugin-android = { module = "com.android.tools.build:gradle", version = "9.0.0" }
