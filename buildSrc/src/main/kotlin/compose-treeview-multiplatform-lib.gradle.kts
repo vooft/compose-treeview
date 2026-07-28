@@ -26,6 +26,7 @@ kotlin {
         binaries.executable()
     }
 
+    iosX64()
     iosArm64()
     iosSimulatorArm64()
 

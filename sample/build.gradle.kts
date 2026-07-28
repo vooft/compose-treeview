@@ -38,6 +38,13 @@ kotlin {
         binaries.executable()
     }
 
+    iosX64 {
+        binaries.framework {
+            baseName = "SampleApp"
+            isStatic = true
+        }
+    }
+
     iosSimulatorArm64 {
         binaries.framework {
             baseName = "SampleApp"
