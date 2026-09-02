@@ -10,7 +10,7 @@ plugins {
 }
 
 kotlin {
-    androidLibrary {
+    android {
         namespace = "io.github.vooft.compose.treeview.sample.shared"
         compileSdk = 36
         minSdk = 23
