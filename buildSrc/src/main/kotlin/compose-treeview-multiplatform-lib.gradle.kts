@@ -10,7 +10,7 @@ group = "io.github.vooft"
 version = System.getenv("TAG") ?: "1.0-SNAPSHOT"
 
 kotlin {
-    androidLibrary {
+    android {
         compileSdk = 37
         minSdk = 21
         compilerOptions {
