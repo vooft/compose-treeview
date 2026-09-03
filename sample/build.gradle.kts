@@ -12,7 +12,7 @@ plugins {
 kotlin {
     android {
         namespace = "io.github.vooft.compose.treeview.sample.shared"
-        compileSdk = 36
+        compileSdk = 37
         minSdk = 23
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_11)
@@ -42,11 +42,12 @@ kotlin {
         binaries.framework {
             baseName = "SampleApp"
             isStatic = true
+            binaryOption("bundleId", "io.github.vooft.compose.treeview.sample")
         }
     }
 
     sourceSets {
-        val desktopMain by getting
+        val desktopMain = getByName("desktopMain")
 
         commonMain.dependencies {
             implementation(project(":compose-treeview-core"))

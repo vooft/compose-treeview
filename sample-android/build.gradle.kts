@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "io.github.vooft.compose.treeview.sample"
-    compileSdk = 36
+    compileSdk = 37
     defaultConfig {
         applicationId = "io.github.vooft.compose.treeview.sample"
         minSdk = 23

@@ -10,8 +10,8 @@ group = "io.github.vooft"
 version = System.getenv("TAG") ?: "1.0-SNAPSHOT"
 
 kotlin {
-    androidLibrary {
-        compileSdk = 35
+    android {
+        compileSdk = 37
         minSdk = 21
         compilerOptions {
             jvmTarget.set(JvmTarget.JVM_11)
